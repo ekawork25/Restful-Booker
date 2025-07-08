@@ -19,7 +19,7 @@ describe('test get booking', () => {
         test.each(Object.values(testData))(
             "Test $title ", async ({title, header, id, expected_result }) => {
                 //console.log('Testing with USER_ID:', process.env.USER_ID);
-                res = await getBooking.getBookingId(id);
+                res = await getBooking.getBookingId(header, id);
                 console.log("HASIL RESPONSE: ", res.body);
 
                 //logger.logRequest(res);
@@ -27,9 +27,8 @@ describe('test get booking', () => {
                 // logger.logExpectation(res);
             
 
-            expect(res.statusCode).toEqual(expected_result.status_code);
+                expect(res.statusCode).toEqual(expected_result.status_code);
 
-            
             });
     
 });

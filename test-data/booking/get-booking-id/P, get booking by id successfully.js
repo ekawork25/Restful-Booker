@@ -3,7 +3,9 @@ const scriptName = path.basename(__filename).split('.')[0];
 
 const test_data = {
     "title": scriptName,
-    "header": {},
+    "header": {
+        "Accept": "application/json"
+    },
     "id": 2,
     "body":{},
     "expected_result": {

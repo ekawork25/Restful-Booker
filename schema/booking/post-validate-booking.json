@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "required": ["firstname", "lastname", "totalprice", "depositpaid", "bookingdates"],
+  "properties": {
+    "firstname": {
+      "type": "string",
+      "description": "Firstname for the guest who made the booking"
+    },
+    "lastname": {
+      "type": "string",
+      "description": "Lastname for the guest who made the booking"
+    },
+    "totalprice": {
+      "type": "number",
+      "description": "The total price for the booking"
+    },
+    "depositpaid": {
+      "type": "boolean",
+      "description": "Whether the deposit has been paid or not"
+    },
+    "bookingdates": {
+      "type": "object",
+      "required": ["checkin", "checkout"],
+      "properties": {
+        "checkin": {
+          "type": "string",
+          "format": "date",
+          "description": "Date the guest is checking in"
+        },
+        "checkout": {
+          "type": "string",
+          "format": "date",
+          "description": "Date the guest is checking out"
+        }
+      }
+    },
+    "additionalneeds": {
+      "type": "string",
+      "description": "Any other needs the guest has"
+    }
+  }
+}
