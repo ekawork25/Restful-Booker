@@ -1,4 +1,5 @@
 node_modules/
+jest-html-reporters-attach/
 jest_html_reporters.html
 package-lock.json
 package.json

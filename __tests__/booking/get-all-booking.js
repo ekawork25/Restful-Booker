@@ -1,5 +1,5 @@
 
-const getBookings = require('../../collections/booking/get-booking-ids');
+const getBookings = require('../../collections/booking/get-all-booking');
 
 const testDataDir = __filename.split('.js')[0].replace('__tests__', 'test-data');
 

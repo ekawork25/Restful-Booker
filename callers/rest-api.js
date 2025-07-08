@@ -20,8 +20,6 @@ class RestApiCaller {
     async get() {
         const res = request(this.url)
             .get(this.endPoint)
-            .set(this.header)
-            .send(this.body)
         return res
     }
 }

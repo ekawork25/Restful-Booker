@@ -4,6 +4,7 @@ const scriptName = path.basename(__filename).split('.')[0];
 const test_data = {
     "title": scriptName,
     "header": {},
+    "id": 2,
     "body":{},
     "expected_result": {
         "status_code": 200,

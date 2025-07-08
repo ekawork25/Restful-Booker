@@ -17,10 +17,11 @@ let res;
 
 describe('test get booking', () => {
         test.each(Object.values(testData))(
-            "Test $title ", async ({title, header, expected_result }) => {
-                console.log('Testing with USER_ID:', process.env.USER_ID);
-                res = await getBooking.getBookingById(header, "1");
-                
+            "Test $title ", async ({title, header, id, expected_result }) => {
+                //console.log('Testing with USER_ID:', process.env.USER_ID);
+                res = await getBooking.getBookingId(id);
+                console.log("HASIL RESPONSE: ", res.body);
+
                 //logger.logRequest(res);
                 // logger.logResponse(res);
                 // logger.logExpectation(res);
