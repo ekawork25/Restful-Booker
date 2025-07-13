@@ -31,6 +31,14 @@ class RestApiCaller {
             .send(this.body)
         return res
     }
+
+    async patch() {
+        const res = request(this.url)
+            .patch(this.endPoint)
+            .set(this.header)
+            .send(this.body)
+        return res
+    }
 }
 
 module.exports = RestApiCaller;
