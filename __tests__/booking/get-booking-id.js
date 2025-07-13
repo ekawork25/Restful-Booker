@@ -1,8 +1,3 @@
-
-require('dotenv').config();
-//const userId = process.env.USER_ID;
-
-
 const getBooking = require('../../collections/booking/get-booking-id');
 
 const testDataDir = __filename.split('.js')[0].replace('__tests__', 'test-data');
@@ -15,17 +10,13 @@ let testData = require('require-all')({
 
 let res;
 
-describe('test get booking', () => {
+describe('test get booking by id', () => {
         test.each(Object.values(testData))(
-            "Test $title ", async ({title, header, id, expected_result }) => {
-                //console.log('Testing with USER_ID:', process.env.USER_ID);
+            "Test $title ", async ({title, header, id, expected_result}) => {
                 res = await getBooking.getBookingId(header, id);
-                console.log("HASIL RESPONSE: ", res.body);
-
                 //logger.logRequest(res);
                 // logger.logResponse(res);
                 // logger.logExpectation(res);
-            
 
                 expect(res.statusCode).toEqual(expected_result.status_code);
 

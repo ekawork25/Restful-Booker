@@ -1,16 +1,15 @@
 const restApiCaller = require('../../callers/rest-api');
 
-const endpointGetBooking ="/booking";
+const endpointGetBooking ="/booking/";
 
-async function getBookingId(header, body) {
+async function getBookingId(header, id) {
     const caller = new restApiCaller({
         url: __URL__,
-        endPoint: endpointGetBooking,
-        header: header,
-        body:body
+        endPoint: endpointGetBooking + id,
+        header: header
     })
     
-    const res = await caller.post()
+    const res = await caller.get()
     return res
 }
 

@@ -4,14 +4,14 @@ const scriptName = path.basename(__filename).split('.')[0];
 const test_data = {
     "title": scriptName,
     "header": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Content-Type": "application/json"
     },
     "id": 2,
     "body":{},
     "expected_result": {
         "status_code": 200,
-        "expected_field": ["firstname","lastname","totalprice","depositpaid","bookingdates.checkin","bookingdates.checkout","additionalneeds"],
-        "json_schema":{},
+        "json_schema":{}
     }
 }
 
