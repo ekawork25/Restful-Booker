@@ -1,5 +1,6 @@
 
 const postToken = require('../../collections/auth/create-token');
+const checkHealth = require('../../collections/ping/health-check')
 
 const testDataDir = __filename.split('.js')[0].replace('__tests__', 'test-data');
 

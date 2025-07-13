@@ -39,6 +39,13 @@ class RestApiCaller {
             .send(this.body)
         return res
     }
+
+    async delete() {
+        const res = request(this.url)
+            .delete(this.endPoint)
+            .set(this.header)
+        return res
+    }
 }
 
 module.exports = RestApiCaller;
