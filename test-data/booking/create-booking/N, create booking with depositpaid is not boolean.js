@@ -3,7 +3,6 @@ const { json } = require('stream/consumers');
 const scriptName = path.basename(__filename).split('.')[0];
 const schema = require('../../../schema/create-booking.json');
 
-
 const test_data = {
     "title": scriptName,
     "header": {
@@ -11,10 +10,10 @@ const test_data = {
         "Accept": "application/json"
     },
     "body": {
-        "firstname" : "Jim",
+        "firstname" : "Clara",
         "lastname" : "Brown",
-        "totalprice" : 111,
-        "depositpaid" : true,
+        "totalprice" : 900,
+        "depositpaid" : 3,
         "bookingdates" : {
             "checkin" : "2018-01-01",
             "checkout" : "2019-01-01"
@@ -23,11 +22,11 @@ const test_data = {
     },
     "expected_result": {
         "status_code": 200,
-        "body":{
-            "booking": {
-                "firstname" : "Jim",
+        "body": {
+            "booking":{
+                "firstname" : "Clara",
                 "lastname" : "Brown",
-                "totalprice" : 111,
+                "totalprice" : 900,
                 "depositpaid" : true,
                 "bookingdates" : {
                     "checkin" : "2018-01-01",
