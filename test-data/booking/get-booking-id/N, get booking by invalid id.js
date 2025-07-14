@@ -8,12 +8,14 @@ const test_data = {
     "header": {
         "Accept": "application/json"
     },
-    "id": ID_GET_BOOKING_VALID, 
+    "id": ID_GET_BOOKING_INVALID,
     "body":{},
     "expected_result": {
-        "status_code": STATUS_CODE_OK,
-        "body": BODY_GET_BOOKING_BY_ID,
-        "json_schema": schema.__VALID__
+        "status_code": STATUS_CODE_NOT_FOUND,
+        "body": {
+            "text": "Not found"
+        },
+        "json_schema": schema.__INVALID__404
     }
 }
 

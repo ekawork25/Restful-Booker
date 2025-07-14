@@ -22,7 +22,7 @@ const test_data = {
         "additionalneeds" : "Breakfast"
     },
     "expected_result": {
-        "status_code": 200,
+        "status_code": STATUS_CODE_OK,
         "body":{
             "booking": {
                 "firstname" : "Jim",

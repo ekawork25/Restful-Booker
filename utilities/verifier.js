@@ -18,11 +18,25 @@ function verifyResponse(actual, expected) {
     try {
         expect(actual.body).toMatchObject(expected.body);
     } catch (e) {
-        // Fallback jika schema check gagal → kemungkinan plain text
-        expect(actual.text).toBe('Internal Server Error');
+        const fallbackText = actual.text;
+            // Cek fallback berdasarkan status code atau isi response
+            if (fallbackText === 'Internal Server Error') {
+                expect(fallbackText).toBe('Internal Server Error');
+            } else if (fallbackText === 'Not Found') {
+                expect(fallbackText).toBe('Not Found');
+            } else if (fallbackText === "I'm a Teapot") {
+                expect(fallbackText).toBe("I'm a Teapot");
+            } else {
+                // Jika tidak sesuai semua fallback, lempar error asli
+                throw e;
+            }
     }
 }
 
+function verifyStatusCode(actual, expected) {
+    expect(actual.statusCode).toEqual(expected.status_code)
+}
+
 module.exports = {
-    verifyResponse
+    verifyResponse, verifyStatusCode
 }

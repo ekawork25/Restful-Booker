@@ -6,12 +6,13 @@ const test_data = {
     "header": {},
     "body":{
         "username" : "abcdef",
-        "password" : "password123"
+        "password" : __PASSWORD__
     },
     "expected_result": {
-        "status_code": 200,
-        "expected_field": "reason",
-        "expected_message": "Bad credentials",
+        "status_code": STATUS_CODE_OK,
+        "body": {
+            "reason": "Bad credentials"
+        },
         "json_schema":{},
     }
 }

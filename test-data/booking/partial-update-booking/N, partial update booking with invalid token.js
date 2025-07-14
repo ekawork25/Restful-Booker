@@ -10,7 +10,7 @@ const test_data = {
         "Cookie": null,
         "Authorization": "YWRtaW46cGFzc3dvcmQxMjM=]"
     },
-    "id": 450,
+    "id": ID_PARTIAL_BOOKING_VALID,
     "body":{
         "firstname": "Mark X",
         "lastname": "Wilson X"

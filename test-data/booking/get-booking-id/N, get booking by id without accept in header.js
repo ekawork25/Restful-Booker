@@ -1,19 +1,19 @@
 const path = require('path');
 const scriptName = path.basename(__filename).split('.')[0];
+const schema = require('../../../schema/get-booking-by-id.json');
+
 
 const test_data = {
     "title": scriptName,
     "header": {},
-    "body":{
-        "username" : __USERNAME__,
-        "password" : "abc123"
-    },
+    "id": ID_GET_BOOKING_VALID,
+    "body":{},
     "expected_result": {
-        "status_code": STATUS_CODE_OK,
+        "status_code": STATUS_I_AM_TEAPOT,
         "body": {
-            "reason": "Bad credentials"
+            "text": "I'm a Teapot"
         },
-        "json_schema":{},
+        "json_schema": schema.__INVALID__418
     }
 }
 

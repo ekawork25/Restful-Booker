@@ -10,7 +10,7 @@ const test_data = {
     "expected_result": {
         "status_code": STATUS_CODE_OK,
         "expected_field": "bookingid",
-        "json_schema":{},
+        "json_schema": {}
     }
 }
 

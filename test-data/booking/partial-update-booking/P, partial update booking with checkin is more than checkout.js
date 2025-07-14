@@ -10,7 +10,7 @@ const test_data = {
         "Cookie": null,
         "Authorization": "YWRtaW46cGFzc3dvcmQxMjM=]"
     },
-    "id": 6,
+    "id": ID_PARTIAL_BOOKING_VALID,
     "body":{
         "bookingdates": {
             "checkin": "02-04-2025",

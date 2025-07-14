@@ -5,6 +5,36 @@
     "STATUS_CODE_CREATED": 201,
     "STATUS_CODE_FORBIDDEN": 403,
     "STATUS_CODE_NOT_ALLOWED": 405,
-    "STATUS_CODE_NOT_FOUND": 404
-    
+    "STATUS_CODE_NOT_FOUND": 404,
+    "STATUS_I_AM_TEAPOT": 418,
+    "STATUS_INTERNAL_SERVER_ERROR":500,
+
+    "__USERNAME__":"admin",
+    "__PASSWORD__":"password123",
+
+    "ID_DELETE_BOOKING_SUCCESS": "203",
+    "ID_DELETE_BOOKING_INVALID": "19000",
+
+    "ID_UPDATE_BOOKING_VALID": "74",
+    "ID_UPDATE_BOOKING_INVALID": "87200",
+
+    "ID_PARTIAL_BOOKING_VALID": "208",
+    "ID_PARTIAL_BOOKING_INVALID": "294000",
+
+    "ID_GET_BOOKING_VALID": "93" , 
+    "ID_GET_BOOKING_INVALID": "48900",
+
+    "BODY_GET_BOOKING_BY_ID": 
+        {
+            "firstname": "Josh",
+            "lastname": "Allen",
+            "totalprice": 111,
+            "depositpaid": true,
+            "bookingdates": {
+                "checkin": "2018-01-01",
+                "checkout": "2019-01-01"
+            },
+            "additionalneeds": "super bowls"
+        }
+
 }

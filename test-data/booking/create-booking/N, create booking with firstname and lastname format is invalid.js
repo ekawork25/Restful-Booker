@@ -21,7 +21,7 @@ const test_data = {
         "additionalneeds" : "Breakfast"
     },
     "expected_result": {
-        "status_code": 500,
+        "status_code": STATUS_INTERNAL_SERVER_ERROR,
         "body": {
             "text": "Internal Server Error"
         },

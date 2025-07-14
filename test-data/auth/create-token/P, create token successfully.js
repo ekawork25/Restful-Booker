@@ -8,12 +8,22 @@ const test_data = {
         "Accept": "application/json"
     },
     "body":{
-        "username" : "admin",
-        "password" : "password123"
+        "username" : __USERNAME__,
+        "password" : __PASSWORD__
     },
     "expected_result": {
-        "status_code": 200,
-        "expected_field": "token",
+        "status_code": STATUS_CODE_OK,
+        //"expected_field": "token",
+        "body": {
+            "type": "object",
+            "required_fields": ["token"],
+            "field_types": {
+                "token": "string"
+            },
+            "field_patterns": {
+                "token": "^[a-zA-Z0-9]+$"
+            }
+        },
         "json_schema":{},
     }
 }

@@ -9,7 +9,7 @@ const test_data = {
         "Content-Type": "application/json",
         "Authorization": "YWRtaW46cGFzc3dvcmQxMjM=]"
     },
-    "id": 6,
+    "id": ID_PARTIAL_BOOKING_VALID,
     "body":{
         "firstname": "Mark X",
         "lastname": "Wilson X"

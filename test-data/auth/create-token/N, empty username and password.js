@@ -9,9 +9,10 @@ const test_data = {
         "password" : ""
     },
     "expected_result": {
-        "status_code": 200,
-        "expected_field": "reason",
-        "expected_message": "Bad credentials",
+        "status_code": STATUS_CODE_OK,
+        "body": {
+            "reason": "Bad credentials"
+        },
         "json_schema":{},
     }
 }

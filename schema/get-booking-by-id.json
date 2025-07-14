@@ -1,0 +1,56 @@
+{
+  "__VALID__": 
+  {
+        "type": "object",
+        "required": [
+          "firstname",
+          "lastname",
+          "totalprice",
+          "depositpaid",
+          "bookingdates"
+        ],
+        "properties": {
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "totalprice": {
+            "type": "integer"
+          },
+          "depositpaid": {
+            "type": "boolean"
+          },
+          "bookingdates": {
+            "type": "object",
+            "required": ["checkin", "checkout"],
+            "properties": {
+              "checkin": {
+                "type": "string",
+                "format": "date"
+              },
+              "checkout": {
+                "type": "string",
+                "format": "date"
+              }
+            },
+            "additionalProperties": false
+          },
+          "additionalneeds": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+  },
+
+  "__INVALID__418":
+  {
+    "text": "I'm a Teapot"
+  },
+
+  "__INVALID__404":
+  {
+    "text": "Not found"
+  }
+}

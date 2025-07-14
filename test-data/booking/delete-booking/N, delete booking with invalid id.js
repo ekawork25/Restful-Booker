@@ -10,7 +10,7 @@ const test_data = {
         "Cookie": null,
         "Authorization": "YWRtaW46cGFzc3dvcmQxMjM=]"
     },
-    "id": 1,
+    "id": ID_DELETE_BOOKING_INVALID,
     "expected_result": {
         "status_code": STATUS_CODE_NOT_ALLOWED,
         "json_schema":{}

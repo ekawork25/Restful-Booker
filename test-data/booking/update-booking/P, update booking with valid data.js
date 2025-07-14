@@ -10,7 +10,7 @@ const test_data = {
         "Cookie": null,
         "Authorization": "YWRtaW46cGFzc3dvcmQxMjM=]"
     },
-    "id": 6,
+    "id": ID_UPDATE_BOOKING_VALID,
     "body":{
         "firstname": "Mark X",
         "lastname": "Wilson X",
@@ -23,7 +23,7 @@ const test_data = {
         "additionalneeds": "Breakfast X"
     },
     "expected_result": {
-        "status_code": 200,
+        "status_code": STATUS_CODE_OK,
         "json_schema":{}
     }
 }

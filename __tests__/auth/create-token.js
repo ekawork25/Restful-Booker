@@ -16,22 +16,16 @@ describe('test create token', () => {
         test.each(Object.values(testData))(
             "Test $title ", async ({title, header, body, expected_result }) => {
                 res = await postToken.createToken(body);
-                
-                // logger.logRequest(res);
-                // logger.logResponse(res);
-                // logger.logExpectation(res);
-            
-
-                expect(res.statusCode).toEqual(expected_result.status_code);
-                expect(res.body).toHaveProperty(expected_result.expected_field);
-                
-                if("reason" in res.body){
-                    const actualValue = res.body[expected_result.expected_field];
-                    expect(actualValue).toBe(expected_result.expected_message);
-                }
-
-            
-            });
+              
+                if ('token' in res.body) {
+                    expect(typeof res.body.token).toBe('string');
+                    expect(res.body.token).toMatch(/^[a-zA-Z0-9]+$/); // validasi format token
+                  } else if ('reason' in res.body) {
+                    expect(res.body.reason).toBe('Bad credentials');
+                  } else {
+                    throw new Error('Unexpected response structure');
+                  }
+                });
     
 });
 

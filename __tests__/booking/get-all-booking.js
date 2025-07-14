@@ -1,5 +1,6 @@
 
 const getBookings = require('../../collections/booking/get-all-booking');
+const { verifyResponse, verifyStatusCode } = require('../../utilities/verifier');
 
 const testDataDir = __filename.split('.js')[0].replace('__tests__', 'test-data');
 
@@ -15,13 +16,8 @@ describe('test get booking', () => {
         test.each(Object.values(testData))(
             "Test $title ", async ({title, header, param, body, expected_result }) => {
                 res = await getBookings.getBooking();
-                
-                // logger.logRequest(res);
-                // logger.logResponse(res);
-                // logger.logExpectation(res);
+                verifyStatusCode(res, expected_result);
             
-
-                expect(res.statusCode).toEqual(expected_result.status_code);
                 res.body.forEach(item => {
                     expect(item).toHaveProperty(expected_result.expected_field);
                 });
