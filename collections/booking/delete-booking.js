@@ -1,19 +1,19 @@
 const restApiCaller = require('../../callers/rest-api');
 
-const endpointGetBooking ="/booking/";
+const endpointBooking ="/booking/";
 
-async function getBookingId(header, id) {
+async function deleteBooking(header, id, token) {
     const caller = new restApiCaller({
         url: __URL__,
-        endPoint: endpointGetBooking + id,
+        endPoint: endpointBooking + id,
         header: header
     })
     
-    const res = await caller.get()
+    const res = await caller.delete()
     return res
 }
 
 
 module.exports={
-    getBookingId
+    deleteBooking
 };

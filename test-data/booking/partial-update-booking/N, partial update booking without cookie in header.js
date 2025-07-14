@@ -1,16 +1,21 @@
 const path = require('path');
 const scriptName = path.basename(__filename).split('.')[0];
 
+
 const test_data = {
     "title": scriptName,
     "header": {
         "Accept": "application/json",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Authorization": "YWRtaW46cGFzc3dvcmQxMjM=]"
     },
-    "id": 2,
-    "body":{},
+    "id": 6,
+    "body":{
+        "firstname": "Mark X",
+        "lastname": "Wilson X"
+    },
     "expected_result": {
-        "status_code": 200,
+        "status_code": 403,
         "json_schema":{}
     }
 }
