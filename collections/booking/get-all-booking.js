@@ -15,7 +15,6 @@ async function getBooking(param) {
     return res
 }
 
-
 module.exports={
     getBooking
 };

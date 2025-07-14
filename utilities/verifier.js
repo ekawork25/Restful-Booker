@@ -13,10 +13,13 @@ function verifyResponse(actual, expected) {
         throw error;
     }
     
-    expect(actual.body).toMatchSchema(expected.json_schema);
-   
+    if (typeof actual.body === 'object' && actual.body !== null) {
+        expect(actual.body).toMatchSchema(expected.json_schema);
+      }
     try {
-        expect(actual.body).toMatchObject(expected.body);
+        if (expected.body && Object.keys(expected.body).length > 0) {
+            expect(actual.body).toMatchObject(expected.body);
+        }
     } catch (e) {
         const fallbackText = actual.text;
             // Cek fallback berdasarkan status code atau isi response

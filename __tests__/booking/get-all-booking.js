@@ -15,12 +15,9 @@ let res;
 describe('test get booking', () => {
         test.each(Object.values(testData))(
             "Test $title ", async ({title, header, param, body, expected_result }) => {
-                res = await getBookings.getBooking();
-                verifyStatusCode(res, expected_result);
             
-                res.body.forEach(item => {
-                    expect(item).toHaveProperty(expected_result.expected_field);
-                });
+                res = await getBookings.getBooking(param);
+                verifyResponse(res, expected_result);
             
             });
     
