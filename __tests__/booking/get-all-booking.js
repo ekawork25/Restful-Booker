@@ -13,7 +13,7 @@ let res;
 
 describe('test get booking', () => {
         test.each(Object.values(testData))(
-            "Test $title ", async ({title, header, body, expected_result }) => {
+            "Test $title ", async ({title, header, param, body, expected_result }) => {
                 res = await getBookings.getBooking();
                 
                 // logger.logRequest(res);

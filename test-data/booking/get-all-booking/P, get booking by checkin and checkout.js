@@ -6,7 +6,10 @@ const test_data = {
     "header": {
         "Accept": "application/json"
     },
-    "param":{},
+    "params":{
+        "checkin": "2017-10-17",
+        "checkout": "2022-08-30"
+    },
     "expected_result": {
         "status_code": STATUS_CODE_OK,
         "expected_field": "bookingid",

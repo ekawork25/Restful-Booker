@@ -3,10 +3,8 @@ const scriptName = path.basename(__filename).split('.')[0];
 
 const test_data = {
     "title": scriptName,
-    "header": {
-        "Accept": "application/json"
-    },
-    "param":{},
+    "header": {},
+    "body":{},
     "expected_result": {
         "status_code": STATUS_CODE_OK,
         "expected_field": "bookingid",

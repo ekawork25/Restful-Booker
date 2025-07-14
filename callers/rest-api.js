@@ -21,6 +21,7 @@ class RestApiCaller {
         const res = request(this.url)
             .get(this.endPoint)
             .set(this.header)
+            .query(this.param)
         return res
     }
 
