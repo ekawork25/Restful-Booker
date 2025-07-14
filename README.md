@@ -49,6 +49,12 @@ Getting Started
                     });
         
                   });
-    
+
+7. Report
+
+   <img width="2880" height="2257" alt="image" src="https://github.com/user-attachments/assets/c04c4149-54e3-4f6e-a003-21aa53ff9b0a" />
+
+   
+
 
 
