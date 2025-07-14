@@ -6,7 +6,10 @@ const test_data = {
     "header": {
         "Accept": "application/json"
     },
-    "param":{},
+    "params":{
+        "firstname": "Eric",
+        "lastname": "Smith"
+    },
     "expected_result": {
         "status_code": STATUS_CODE_OK,
         "expected_field": "bookingid",
